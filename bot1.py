@@ -1,8 +1,14 @@
 import telebot
 
+import argparse
+parser = argparse.ArgumentParser()
+
 import requests
 
-bot = telebot.TeleBot('%token%')
+parser.add_argument("token", help = "token234567")
+args = parser.parse_args()
+
+bot = telebot.TeleBot(args.token)
 
 data = requests.get('https://www.cbr-xml-daily.ru/daily_json.js').json()
 @bot.message_handler(commands=['get'])
