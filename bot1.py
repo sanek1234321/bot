@@ -2,7 +2,7 @@ import telebot
 
 import requests
 
-bot = telebot.TeleBot('5177078876:AAFKp_WSaFclvIhNdSqbSND6xIectqd5jF0')
+bot = telebot.TeleBot('%token%')
 
 data = requests.get('https://www.cbr-xml-daily.ru/daily_json.js').json()
 @bot.message_handler(commands=['get'])
