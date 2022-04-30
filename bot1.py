@@ -19,7 +19,6 @@ def handle_text(message):
 
 bot.polling()
 
-i=1
-while i==1:
+while true:
     data = requests.get('https://www.cbr-xml-daily.ru/daily_json.js').json()
     time.sleep(3600)
