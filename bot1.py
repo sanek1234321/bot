@@ -1,5 +1,5 @@
 import telebot
-
+import time
 import argparse
 parser = argparse.ArgumentParser()
 
@@ -20,3 +20,7 @@ def start_message(message):
 
 bot.polling()
 
+i=1
+while i==1:
+    data = requests.get('https://www.cbr-xml-daily.ru/daily_json.js').json()
+    time.sleep(3600)
